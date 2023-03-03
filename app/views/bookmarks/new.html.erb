@@ -1,0 +1,8 @@
+<%= simple_form_for @bookmark do |f| %>
+  <%= f.label :bookmark %>
+  <%= f.text_field :comment %>
+  <%# <%= f.association :movie_id, collection: Movie.active.order(:name), prompt: "Select a movie" %>
+  <%= f.association :movie %>
+  <%# <%=  f.collection_check_boxes :list_id, Movie.all, :title  %>
+  <%= f.submit %>
+<% end %>

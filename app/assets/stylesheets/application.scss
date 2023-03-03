@@ -10,3 +10,16 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  border: 1px solid black;
+  width: 70%;
+  margin: auto;
+  padding: 5px;
+}
+
+div {
+  border: 1px solid black;
+  padding: 2px;
+  margin: 2px;
+}

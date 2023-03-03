@@ -1,0 +1,16 @@
+<h1>Lists:</h1>
+
+
+<ul>
+ <% @lists.each do |list| %>
+    <%= link_to(list) do %>
+    <br>
+      <li> List Name: <%= list.name %></li>
+    <% end %>
+  <%= link_to "Delete List", list_path(list), data: {turbo_method: :delete} %>
+      <br>
+  <% end %>
+</ul>
+
+<%= link_to "New List", new_list_path %>
+<%= link_to "View Movies", movies_path %>

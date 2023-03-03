@@ -11,6 +11,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="content">
+      <div class="navbar">
+          <h1>WatchList.com</h1>
+        <ul>
+          <li><%= link_to "Lists", lists_path %></li>
+          <li><%= link_to "Movies", movies_path %></li>
+        </ul>
+      </div>
+
+        <%= yield %>
+
+    </div>
   </body>
 </html>

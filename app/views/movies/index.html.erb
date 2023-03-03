@@ -1,0 +1,11 @@
+<ul>
+  <div class="movie-card">
+    <% @movies.each do |movie| %>
+     <%= link_to(movie) do %>
+      <li>Title: <%= movie.title %></li>
+      <li>Description: <%= movie.overview %></li>
+      <li>Rating: <%= movie.rating %></li>
+      <% end %>
+    <% end %>
+  </div>
+</ul>

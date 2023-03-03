@@ -1,0 +1,25 @@
+
+<%# <h2>List ID: <%= @list.id  %></h2>
+
+
+<h4>Movies in this list: <b><%= @list.name %></b></h4>
+
+<ul>
+  <div class="movie-card">
+  <% comment_index = 0 %>
+    <% @movies.each do |movie| %>
+     <%= link_to(movie) do %>
+        <li>Title: <%= movie.title %></li>
+        <li>Description: <%= movie.overview %></li>
+        <li>Rating: <%= movie.rating %></li>
+      <% end %>
+      <li>Comment: <%= @comments[comment_index] %></li>
+      <% comment_index += 1 %>
+  <% end %>
+  </div>
+</ul>
+
+
+
+<%= link_to "Add Movie/Bookmark", new_bookmark_path(@list) %>
+<%= link_to "View Bookmarks", bookmarks_path %>
